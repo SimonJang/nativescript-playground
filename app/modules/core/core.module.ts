@@ -1,6 +1,10 @@
 import {NgModule} from '@angular/core';
-import {DatabaseService} from './services/database.service'
-import {LogService} from './services/log.service'
+import {NativeScriptModule} from 'nativescript-angular/nativescript.module'
+import {PROVIDERS} from './services' 
 
-@NgModule({})
+@NgModule({
+    imports: [NativeScriptModule],
+    providers: [...PROVIDERS],
+    exports: [NativeScriptModule]
+})
 export class CoreModule { }
